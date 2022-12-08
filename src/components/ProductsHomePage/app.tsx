@@ -28,8 +28,8 @@ function ProductsHomePage (){
                         <img src={tShirts} alt='imagem Camiseta'></img>
                         <p>Camiseta Lisa Branca</p>
                         <p>R$ 79.90</p>
-                       <a href="/"></a>
-                       <a href="/"><ButtonBuy title='COMPRAR'></ButtonBuy></a>
+                        <a href="/"></a>
+                        <a href="/"><ButtonBuy title='COMPRAR'></ButtonBuy></a>
 
                     </div>
                         
