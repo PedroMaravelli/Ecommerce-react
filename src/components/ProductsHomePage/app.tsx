@@ -37,6 +37,39 @@ function ProductsHomePage (){
                 </article>
             </section>
 
+            <section className='containerCard'>
+                <article className='sessionBestSellers'>
+                        <div className='barDisiving'></div>
+                        <h2>ROUPAS FEMININAS</h2>
+                </article>
+                <article className='cardProducts'>
+                    <div className="card">
+                        <img src={tShirts} alt='imagem Camiseta'></img>
+                        <p>Camiseta Branca Feminina</p>
+                        <p>R$ 79.90</p>
+                        <a href="/"><ButtonBuy title='COMPRAR'></ButtonBuy></a>
+                    </div>
+                    <div className="card">
+                        <img src={tShirts} alt='imagem Camiseta'></img>
+                        <p>Camiseta Branca Feminina</p>
+                        <p>R$ 79.90</p>
+                        <a href="/"><ButtonBuy title='COMPRAR'></ButtonBuy></a>
+
+                    </div>
+                    <div className="card">
+                        <img src={tShirts} alt='imagem Camiseta'></img>
+                        <p>Camiseta Branca Feminina</p>
+                        <p>R$ 79.90</p>
+                        <a href="/"></a>
+                        <a href="/"><ButtonBuy title='COMPRAR'></ButtonBuy></a>
+
+                    </div>
+                        
+
+                </article>
+
+                </section>
+
         </div>
     )
 }
