@@ -6,7 +6,7 @@ import api from '../../services/api'
 
 interface homeProps{
     nome:string,
-    preco:number,
+    preco:string,
     imagem:string
 }
 
