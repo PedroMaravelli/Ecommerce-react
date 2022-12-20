@@ -16,7 +16,7 @@ function Header (){
                     <p>lojagrupo7@gmail.com</p>
                 </article>
                 <article className='contactInfo'>
-                    <Link to='/singin'>Cadastre-se</Link>
+                    <Link to='/cadastro'>Cadastre-se</Link>
                     <div className='dividingBar'>|</div>
                     <Link to='/login'>Login</Link>
                 </article>

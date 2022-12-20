@@ -8,7 +8,7 @@ function LoginComponent(){
             <section className='sessionTitleLogin'>
                 <p>LOGIN</p>
             </section>
-            <form action='/login' method='post'>
+            <form action='/login' method='get'>
                 <article className='containerFormsInput'>
                     <label>E-mail</label>
                     <input type="email" name="email" id="email" placeholder='Insira seu e-mail'/>
