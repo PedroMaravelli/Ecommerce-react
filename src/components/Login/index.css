@@ -1,0 +1,46 @@
+.containerLoginDad{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:5%;
+    margin-bottom:100px
+}
+.containerLoginDad .sessionTitleLogin{
+    width:100%;
+    text-align:center;
+    font-size:3.438em;
+    font-weight:bold;
+}
+.containerLoginDad form{
+    display:flex;
+    flex-direction:column;
+    padding-top:3%
+}
+.containerLoginDad .containerFormsInput{
+    display:flex;
+    flex-direction:column;
+    font-weight:bold;
+    font-size:1.2em
+}
+.containerLoginDad .containerFormsInput input{
+    width: 815px;
+    height:60px;
+    border-radius:10px;
+    border:none;
+    background-color:#EFEEEE;
+    padding-left:20px;
+    margin-top:5px;
+    
+}
+.containerLoginDad .containerFormsInput #senha{
+    margin-top:3%
+}
+.containerLoginDad .containerButtonLogin{
+    display:flex;
+    flex-direction:column;
+    margin-top:5%;
+    align-items:end;
+}
+
+
+    

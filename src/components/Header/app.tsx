@@ -2,6 +2,7 @@ import  './index.css'
 import logo from '../../assets/logo.png'
 import searchImg from '../../assets/searchImg.png'
 import carHeader from '../../assets/carHeader.png'
+import { Link } from 'react-router-dom'
 
 
 
@@ -15,18 +16,18 @@ function Header (){
                     <p>lojagrupo7@gmail.com</p>
                 </article>
                 <article className='contactInfo'>
-                    <a href='/singin'>Cadastre-se</a>
+                    <Link to='/singin'>Cadastre-se</Link>
                     <div className='dividingBar'>|</div>
-                    <a href='/login'>Login</a>
+                    <Link to='/login'>Login</Link>
                 </article>
             </section>
             <section className='containerStatusBar'>
                 <article className='statusBarLeft'>
                     <img src={logo} alt='logo Camiseteria'></img>
-                    <a href='/'>INÍCIO</a>
-                    <a href='/'>PRODUTOS</a>
-                    <a href='/'>CONTATO</a>
-                    <a href='/'>FAQ</a>
+                    <Link to='/'>INÍCIO</Link>
+                    <Link to='/'>PRODUTOS</Link>
+                    <Link to='/'>CONTATO</Link>
+                    <Link to='/'>FAQ</Link>
 
                 </article>
                 <article className='searchProducts'>
@@ -35,7 +36,7 @@ function Header (){
                         <input type='text' name='search' placeholder='Buscar'></input>
 
                     </form>
-                    <a href='/carrinho'><img src={carHeader} alt='imagem do carrinho'></img></a>
+                    <Link to='/carrinho'><img src={carHeader} alt='imagem do carrinho'></img></Link>
                     
 
                 </article>
