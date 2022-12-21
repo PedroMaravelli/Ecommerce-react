@@ -1,0 +1,91 @@
+.containerDadCadastro{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+
+.headerCadastro{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    justify-content:space-between;
+    padding-left:5%;
+    padding-right:5%;
+    padding-top:30px;
+
+}
+#titleMoreInfos{
+    width:30%;
+
+}
+.containerTitleInsertData{
+    font-size:2.375em;
+    margin-top:5%;
+    height:130px;
+    font-weight:bold;
+    border-bottom:1px solid #BBBBBB;
+    width:70%;
+    text-align:center;
+}
+.containerDadCadastro form{
+    width: 55%;
+    margin-top:3%;
+}
+.containerInputAreaInline{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+.containerDadCadastro .inputAreaInsert{
+    display:flex;
+    flex-direction:column;
+    padding-bottom:10px;
+    font-weight:500;
+}
+.containerDadCadastro .inputAreaInsert input, select{
+    width:390px;
+    height:60px;
+    border:none;
+    border-radius:10px;
+    background-color:#F3F1F1;
+    padding-left:20px;
+}
+.containerDadCadastro .inputAreaInsert #email{
+    width:100%
+}
+.containerDadCadastro .passwordContainer{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+
+}
+.containerDadCadastro .checkBoxNews{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:500;
+    margin-top:2%;
+    font-size:1em;
+
+}
+.containerDadCadastro .checkBoxNews input{
+    width:20px;
+    height:20px;
+    margin-right:5px;
+}
+.politicaPrivacidadeText{
+    width:360px;
+    margin-left:27%
+}
+.politicaPrivacidadeText button{
+    width:400px;
+    height:50px;
+    border-radius:10px;
+    font-size:1.2em;
+    border:none;
+    background-color: #6699ff;
+    margin-bottom:20%;
+    
+}

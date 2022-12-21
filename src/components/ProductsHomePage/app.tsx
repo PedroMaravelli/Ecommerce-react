@@ -2,7 +2,11 @@ import './index.css'
 import tShirts from '../../assets/t-shirts.png'
 import ButtonBuy from '../Buttons/ButtonBuy/ButtonBuy'
 import { useState } from 'react'
+import React, { useEffect } from "react";
+
+
 import api from '../../services/api'
+
 
 interface homeProps{
     nome:string,
@@ -11,7 +15,13 @@ interface homeProps{
 }
 
 
-function ProductsHomePage ({nome,preco,imagem}: homeProps){
+    function ProductsHomePage ({nome, preco, imagem}:homeProps ){
+   
+
+  
+
+
+
 
     return(
         <div className='containerDadProducts'>
@@ -21,7 +31,8 @@ function ProductsHomePage ({nome,preco,imagem}: homeProps){
                     <h2>MAIS VENDIDOS</h2>
                 </article>
                 
-                <article className='cardProducts'>
+               
+                        <article className='cardProducts'>
                     
 
                             <div className="card">
@@ -34,6 +45,9 @@ function ProductsHomePage ({nome,preco,imagem}: homeProps){
                         
 
                 </article>
+
+               
+                        
             </section>
 
             <section className='containerCard'>

@@ -7,28 +7,31 @@ import ContactsNews from "../components/ContactsNews/app";
 import Footer from "../components/Footer/app";
 import { useState } from "react";
 import { useProducts } from "../hooks/useProducts";
+import { ProductsHome } from "../interfaces";
 
 
 function HomePage (){
+    const [products, setProducts] = useState<ProductsHome[]>([])
+   api.get('/')
+   .then(res => setProducts(res.data))
 
-const {products, getProducts} = useProducts()
 
-
-
-useEffect(()=>{
-    getProducts()
-
-},[getProducts])
 
 
     return(
     <>
         <Header></Header>
         <Carrosel></Carrosel>
-        {products.map((p)=>{
-            <ProductsHomePage nome={p.nome} preco={p.preco} imagem={p.imagem}/>
+        {
+            products.map((p)=>{
+                <ProductsHomePage nome={p.nome} preco={p.preco} imagem={p.imagem} />
 
-        })}
+            })
+        }
+       
+        
+
+        
        
             
 
