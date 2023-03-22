@@ -1,27 +1,21 @@
 import './index.css'
 import tShirts from '../../assets/t-shirts.png'
 import ButtonBuy from '../Buttons/ButtonBuy/ButtonBuy'
-import { useState } from 'react'
-import React, { useEffect } from "react";
+import { ProductsHomeApi } from '../../screens/homePage'
 
 
-import api from '../../services/api'
+
+
 
 
 interface homeProps{
-    nome:string,
-    preco:string,
-    imagem:string
+    contentProducts:ProductsHomeApi[],
+   
 }
 
 
-    function ProductsHomePage ({nome, preco, imagem}:homeProps ){
+export function ProductsHomePage ({contentProducts}:homeProps ){
    
-
-  
-
-
-
 
     return(
         <div className='containerDadProducts'>
@@ -34,14 +28,21 @@ interface homeProps{
                
                         <article className='cardProducts'>
                     
+                        {
+                            contentProducts.map((product: ProductsHomeApi)=> {
+                                return(
+                                    <div className="card">
+                                        <img src={tShirts} alt='imagem Camiseta'></img>
+                                        <p>{product.nome}</p>
+                                        <p>R${product.preco},00</p>
+                                        <a href="/"><ButtonBuy title='COMPRAR'></ButtonBuy></a>
+                                    </div>
 
-                            <div className="card">
-                            <img src={tShirts} alt='imagem Camiseta'></img>
-                            <p>{nome}</p>
-                            <p>{preco}</p>
-                            <a href="/"><ButtonBuy title='COMPRAR'></ButtonBuy></a>
-                        </div>
 
+                                )
+                            })
+                        }
+                            
                         
 
                 </article>
@@ -87,4 +88,3 @@ interface homeProps{
     )
 }
 
-export default ProductsHomePage
