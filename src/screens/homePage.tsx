@@ -28,16 +28,22 @@ export interface ProductsHomeApi {
 function HomePage (){
 
     const [listProducts, setListProducts] = useState<[]>([])
+    const [listProductsWoman, setListProductsWoman] = useState<[]>([])
+
 
     useEffect(() => {
-        fetch(api+'/')
+        fetch(api + '/')
         .then((response) => response.json())
         .then((data) => {
             setListProducts(data)})
-        
-        
-        
+
     }, [])
+    useEffect(() => {
+        fetch(api + '/womanproducts')
+        .then((response) => response.json())
+        .then((data) => {
+            setListProductsWoman(data)})
+    },[])
     console.log(listProducts);
     
 
@@ -45,7 +51,8 @@ function HomePage (){
     <>
         <Header></Header>
         <Carrosel></Carrosel>
-        <ProductsHomePage contentProducts={listProducts}></ProductsHomePage>
+
+        <ProductsHomePage contentProducts={listProducts} contentProductsWoman={listProductsWoman}></ProductsHomePage>
 
 
         <ContactsNews></ContactsNews>

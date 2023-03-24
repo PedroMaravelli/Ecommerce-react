@@ -10,11 +10,12 @@ import { ProductsHomeApi } from '../../screens/homePage'
 
 interface homeProps{
     contentProducts:ProductsHomeApi[],
+    contentProductsWoman: ProductsHomeApi[]
    
 }
 
 
-export function ProductsHomePage ({contentProducts}:homeProps ){
+export function ProductsHomePage ({contentProducts, contentProductsWoman}:homeProps ){
    
 
     return(
@@ -43,12 +44,7 @@ export function ProductsHomePage ({contentProducts}:homeProps ){
                             })
                         }
                             
-                        
-
                 </article>
-
-               
-                        
             </section>
 
             <section className='containerCard'>
@@ -57,28 +53,21 @@ export function ProductsHomePage ({contentProducts}:homeProps ){
                         <h2>ROUPAS FEMININAS</h2>
                 </article>
                 <article className='cardProducts'>
-                    <div className="card">
-                        <img src={tShirts} alt='imagem Camiseta'></img>
-                        <p>Camiseta Branca Feminina</p>
-                        <p>R$ 79.90</p>
-                        <a href="/"><ButtonBuy title='COMPRAR'></ButtonBuy></a>
-                    </div>
-                    <div className="card">
-                        <img src={tShirts} alt='imagem Camiseta'></img>
-                        <p>Camiseta Branca Feminina</p>
-                        <p>R$ 79.90</p>
-                        <a href="/"><ButtonBuy title='COMPRAR'></ButtonBuy></a>
 
-                    </div>
-                    <div className="card">
-                        <img src={tShirts} alt='imagem Camiseta'></img>
-                        <p>Camiseta Branca Feminina</p>
-                        <p>R$ 79.90</p>
-                        <a href="/"></a>
-                        <a href="/"><ButtonBuy title='COMPRAR'></ButtonBuy></a>
+                    {
+                        contentProductsWoman.map((productWoman) => {
+                            return(
+                                <div className="card">
+                                    <img src={tShirts} alt='imagem Camiseta'></img>
+                                    <p>{productWoman.nome}</p>
+                                    <p>R$ {productWoman.preco}.00</p>
+                                    <a href="/"><ButtonBuy title='COMPRAR'></ButtonBuy></a>
+                                </div>
+                            )
 
-                    </div>
-                        
+                        })
+                    }
+
 
                 </article>
 
