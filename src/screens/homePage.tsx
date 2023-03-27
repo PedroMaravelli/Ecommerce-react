@@ -32,17 +32,15 @@ function HomePage (){
 
 
     useEffect(() => {
-        fetch(api + '/')
-        .then((response) => response.json())
-        .then((data) => {
-            setListProducts(data)})
+        api.get('/')
+        .then(( productsMale ) => {
+            setListProducts( productsMale.data)})
 
     }, [])
     useEffect(() => {
-        fetch(api + '/womanproducts')
-        .then((response) => response.json())
-        .then((data) => {
-            setListProductsWoman(data)})
+        api.get( '/womanproducts')
+        .then((productsWoman) => {
+            setListProductsWoman(productsWoman.data)})
     },[])
     console.log(listProducts);
     

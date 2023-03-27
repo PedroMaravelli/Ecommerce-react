@@ -32,7 +32,7 @@ export function ProductsHomePage ({contentProducts, contentProductsWoman}:homePr
                         {
                             contentProducts.map((product: ProductsHomeApi)=> {
                                 return(
-                                    <div className="card">
+                                    <div  key={product.id} className="card">
                                         <img src={tShirts} alt='imagem Camiseta'></img>
                                         <p>{product.nome}</p>
                                         <p>R${product.preco},00</p>
